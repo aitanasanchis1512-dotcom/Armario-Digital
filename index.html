@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Closet - Estilo Clueless</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts para que se vea elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>🛍️ Mi Armario Inteligente</h1>
+        <p>Tu estilista personal impulsada por IA</p>
+    </header>
+
+    <main>
+        <!-- Sección para agregar ropa -->
+        <section class="card upload-section">
+            <h2>Añadir Nueva Prenda</h2>
+            <form id="clothing-form">
+                <input type="text" id="item-name" placeholder="Ej. Blazer Amarillo" required>
+                <select id="item-category">
+                    <option value="superior">Parte Superior</option>
+                    <option value="inferior">Parte Inferior</option>
+                    <option value="calzado">Calzado</option>
+                </select>
+                <input type="text" id="item-image" placeholder="URL de la imagen de la prenda" required>
+                <button type="submit">Guardar en el Armario</button>
+            </form>
+        </section>
+
+        <!-- Sección del Armario (Grid estilo Clueless) -->
+        <section class="card closet-section">
+            <h2>Mi Armario</h2>
+            <div id="closet-grid" class="grid">
+                <!-- Las prendas se agregarán aquí dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Sección de Combinador de Outfits con IA -->
+        <section class="card ai-section">
+            <h2>✨ Estilista Virtual IA</h2>
+            <button id="generate-outfit">Sugerir Outfit del Día</button>
+            <div id="outfit-result" class="outfit-box">
+                <p>Haz clic en el botón para que la IA elija tu combinación perfecta hoy.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
